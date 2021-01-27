@@ -19,5 +19,10 @@ vowelRegex = re.compile(r'[aeiouAEIOU]')#Encontrar todas essas vogais no texto
 mi = vowelRegex.findall('RoboCop eats baby food. BABY FOOD.')
 print(mi)
 
+caractereRegex = re.compile(r'[a-zA-Z0-9]')#Referir todos os valores de "a" a "z" por exemplo
+mu = caractereRegex.findall('Observe a postura desde a 1 letra até a ULTIMA.')
+print(mu)
 
-
+consoantRegex = re.compile(r'[^aeiouAEIOU]')
+me = consoantRegex.findall('RoboCop east baby food. BABY FOOD.')
+print(me)
