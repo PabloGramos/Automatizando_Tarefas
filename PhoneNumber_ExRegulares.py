@@ -26,3 +26,17 @@ print(mu)
 consoantRegex = re.compile(r'[^aeiouAEIOU]')
 me = consoantRegex.findall('RoboCop east baby food. BABY FOOD.')
 print(me)
+
+beginsWithHello = re.compile(r'^Hello')
+print(beginsWithHello.search('Hello World!') , beginsWithHello.search('He said hello.')==None)
+
+endsWithNumber = re.compile(r'\d+$')#COM O '+' QUER DIZER UM OU MAIS NUMEROS NO FINAL DA STRING, SEM O '+' APENAS O ULTIMO NUMERO
+print(endsWithNumber.search('You number is 42') , endsWithNumber.search('You number is forty two.')==None)
+
+atRegex = re.compile(r'.at')
+print(atRegex.findall('The cat in the hat sat on tyhe flat mat.'))
+
+nameRegex = re.compile(r'First Name:(.*)Last Name:(.*)')
+mo = nameRegex.search('First Name: Al stop, lefth Last Name: Sweigart')
+print(mo.group(1),mo.group(2))
+
