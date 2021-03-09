@@ -40,3 +40,6 @@ nameRegex = re.compile(r'First Name:(.*)Last Name:(.*)')
 mo = nameRegex.search('First Name: Al stop, lefth Last Name: Sweigart')
 print(mo.group(1),mo.group(2))
 
+robocop = re.compile(r'robocop',re.I)
+print(robocop.search('RoboCop is part man.').group())
+
