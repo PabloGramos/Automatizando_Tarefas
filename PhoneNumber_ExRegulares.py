@@ -43,3 +43,6 @@ print(mo.group(1),mo.group(2))
 robocop = re.compile(r'robocop',re.I)
 print(robocop.search('RoboCop is part man.').group())
 
+nomesRegex = re.compile(r'Agent \w+') # Vai substituir a palavra selecionanda e a proxima por CENSORED
+print(nomesRegex.sub('CENSORED','Agent Alice gave the secret documents to Agent Bob.'))
+
