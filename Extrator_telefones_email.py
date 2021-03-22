@@ -24,4 +24,16 @@ for groups in phoneRegex.findall(text):
     if groups[8] != '':
         phoneNum += 'x' + groups[8]
     matches.append(phoneNum)
-for groups
+for groups in emailRegex.findall(text):
+    matches.append(groups[0])
+
+#Copia os resultados para o Clipboard
+if len(matches)>0:
+    pyperclip.copy('\n'.join(matches))
+    print('Copied to clipboard: ')
+    print('\n'.join(matches))
+else:
+    print('No phone numbers or email addresses found.')
+
+# AO ENTRAR EM UM SITE PRESSIONE CTRL + A PARA SELECIONAR TODO TEXTO DA PAGINA
+# E PRESSIONE CTRL + C PARA COPIAR E ENTÃO APENAS COPILE O CÓDIGO
